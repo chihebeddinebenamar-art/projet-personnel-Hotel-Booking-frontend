@@ -1,0 +1,494 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #faf8fa;
+}
+.card {
+  opacity: 0.9;
+}
+
+/* Navigation bar definitions */
+ .navbar{
+  padding: 0;
+ }
+ .navbar .navbar-nav .nav-link{
+  padding: 1em;
+ }
+ .navbar .navbar-nav .nav-item{
+  position: relative;
+ }
+
+
+ 
+
+ .navbar .navbar-nav .nav-item::after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  background-color:rgb(169, 77, 123) ;
+  width: 0;
+  margin: 0 auto;
+  height: 4px;
+  transition: all .5s;
+ }
+ .navbar .navbar-nav .nav-item:hover::after{
+  width: 100%;
+ }
+ .navbar-dark .navbar-nav .nav-link {
+  color: rgb(25, 24, 24);
+}
+
+.navbar-dark .navbar-brand {
+  color: rgb(25, 24, 24);
+}
+
+ @media screen and (min-width: 992px){
+  .navbar{
+  padding: 0;
+ }
+ .navbar .navbar-nav .nav-link{
+  padding: 1em 0;
+ }
+ .navbar .navbar-nav .nav-item{
+  margin: 0 1em;
+ }
+ }
+
+  /* Hotel custom color */
+ .btn-hotel{
+  background-color: rgb(169, 77, 123);
+  color: #fff;
+  }
+  .btn-hotel:hover{
+  background-color: rgb(137, 127, 132);
+  color: #fff;
+  transition: 0.7s;
+  outline-color: transparent;
+  outline-style:solid;
+
+  }
+
+  .hotel-color{
+    color: rgb(169, 77, 123);
+  }
+  .room-price{
+    color:darkgoldenrod;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:medium;
+  }
+  .vertical-rule{
+    border-left: '0.5px solid black';
+    height: '100vh'
+  }
+
+
+
+.parallax {
+  background-image: url("./assets/images/hotel1.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.header {
+  position: relative;
+  height: 150px;
+  background-size: cover;
+  background-image: url("./assets/images/services.jpg");
+  background-position: center center;
+}
+.header-title {
+  color: #fff;
+  font-size: 4rem;
+  align-content: center;
+}
+
+.parallax {
+  margin-top: 50px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.animated {
+  animation-duration: 1s;
+}
+
+.animated-texts h1 {
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.animated-texts p, h1, h2 {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 60% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* Header overlay */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+    color: #fff;
+    justify-content: flex-start;
+  }
+
+/* The header banner */
+.header-banner {
+  background-image:  url("./assets/images/services-1.jpg");
+   background-size: cover;
+  background-position: center;
+   position: relative;
+  height: 80vh;
+ }
+
+.header-banner {
+  position: relative;
+  height: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-banner h1 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header-banner h1 {
+    font-size: 16px;
+  }
+}
+
+/* —— Layout global —— */
+.site-main {
+  width: 100%;
+  max-width: none;
+}
+
+/* —— Navigation —— */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.site-navbar {
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(169, 77, 123, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.site-brand-text {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: #2a1f28;
+}
+
+.site-logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgb(169, 77, 123), rgb(120, 60, 95));
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.site-nav-link {
+  font-weight: 500;
+  color: #3d3540 !important;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem !important;
+}
+
+.site-nav-link:hover {
+  color: rgb(169, 77, 123) !important;
+  background: rgba(169, 77, 123, 0.08);
+}
+
+.site-nav-link.active {
+  color: rgb(169, 77, 123) !important;
+  font-weight: 600;
+}
+
+/* —— Hero accueil —— */
+.home-hero {
+  position: relative;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/images/services-1.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+}
+
+.home-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(20, 12, 24, 0.82) 0%,
+    rgba(60, 35, 55, 0.55) 45%,
+    rgba(20, 12, 24, 0.75) 100%
+  );
+}
+
+.home-hero-content {
+  z-index: 1;
+}
+
+.home-hero-kicker {
+  letter-spacing: 0.2em;
+  opacity: 0.9;
+}
+
+.home-hero-title {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.home-hero-sub {
+  max-width: 36rem;
+  opacity: 0.95;
+}
+
+/* —— Bloc CTA home —— */
+.home-cta-inner {
+  background: linear-gradient(135deg, rgb(120, 55, 92), rgb(169, 77, 123));
+  box-shadow: 0 12px 40px rgba(169, 77, 123, 0.35);
+}
+
+/* —— Room carousel —— */
+.room-carousel-block {
+  padding-top: 0.5rem;
+}
+
+/* —— Page À propos —— */
+.about-page {
+  background: #faf8fa;
+}
+
+.about-hero {
+  position: relative;
+  min-height: 38vh;
+  display: flex;
+  align-items: center;
+  background-image: url("./assets/images/hotel1.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 12, 24, 0.75),
+    rgba(40, 28, 45, 0.85)
+  );
+}
+
+.about-kicker {
+  letter-spacing: 0.2em;
+  opacity: 0.85;
+}
+
+.about-icon-wrap {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 12px;
+  background: rgba(169, 77, 123, 0.12);
+  color: rgb(169, 77, 123);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.about-cta {
+  background: #fff;
+  border: 1px solid rgba(169, 77, 123, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+/* —— Pied de page —— */
+.site-footer {
+  background: linear-gradient(180deg, #1e1620 0%, #121015 100%);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.site-footer-lead {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.site-footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.site-footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-footer-links a:hover {
+  color: rgb(232, 180, 205);
+}
+
+.site-footer-contact {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.site-footer-divider {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.site-footer-copy {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.site-logo-icon--footer {
+  background: rgba(255, 255, 255, 0.92);
+  color: rgb(169, 77, 123);
+}
+
+/* —— Zone admin (sidebar) —— */
+.admin-shell {
+  width: 100%;
+}
+
+.admin-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #2a1f2e 0%, #1a141f 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sidebar-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.admin-sidebar-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.admin-sidebar-link.active {
+  color: #fff;
+  background: rgba(169, 77, 123, 0.45);
+  font-weight: 600;
+}
+
+.admin-main {
+  min-width: 0;
+}
+
+/* Liste / formulaire chambres (admin) */
+.admin-rooms-list .admin-rooms-table thead th {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 767.98px) {
+  .admin-shell {
+    flex-direction: column;
+  }
+  .admin-sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+/* —— Login page responsive —— */
+@media (max-width: 768px) {
+  .login-left-panel {
+    display: none !important;
+  }
+  .login-right-panel {
+    width: 100% !important;
+    padding: 32px 20px !important;
+  }
+}
